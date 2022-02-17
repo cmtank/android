@@ -57,7 +57,7 @@
   <project name="cm12-amami/android_external_tremolo" path="external/tremolo" groups="pdk" />
   <project name="cm12-amami/android_external_wpa_supplicant_8" path="external/wpa_supplicant_8" groups="pdk" />
   <project name="cm12-amami/android_frameworks_av" path="frameworks/av" groups="pdk" />
-  <project name="cm12-amami/android_frameworks_base" path="frameworks/base" groups="pdk-cw-fs" />
+  <project name="cmtank/android_frameworks_base" path="frameworks/base" remote="github" revision="cm-12.1" />
   <project name="cm12-amami/android_frameworks_ex" path="frameworks/ex" groups="pdk-cw-fs" />
   <project name="cm12-amami/android_frameworks_minikin" path="frameworks/minikin" groups="pdk-cw-fs" />
   <project name="cm12-amami/android_frameworks_native" path="frameworks/native" groups="pdk" />
@@ -95,7 +95,7 @@
   <project name="cm12-amami/android_platform_external_giflib" path="external/giflib" groups="pdk-cw-fs,qcom_msm8x26" />  
   <project name="cm12-amami/android_platform_external_libnl" path="external/libnl" groups="pdk" />
   <project name="cm12-amami/android_platform_external_libopus" path="external/libopus" groups="pdk" />
-  <project name="cm12-amami/android_system_core" path="system/core" groups="pdk" />
+  <project name="cmtank/android_system_core" path="system/core" remote="github" revision="cm-12.1" />
   <project name="cm12-amami/android_system_extras_su" path="system/extras/su" />
   <project name="cm12-amami/android_system_media" path="system/media" groups="pdk" />
   <project name="cm12-amami/android_system_vold" path="system/vold" groups="pdk" />
@@ -107,7 +107,7 @@
   <include name="ref/sony-lineage.xml" />
 
   <!-- LineageOS references from higher branches -->
-  <project name="LineageOS/android_external_chromium-webview" path="external/chromium-webview" clone-depth="1" revision="master" />
+  <project name="LineageOS/android_external_chromium-webview" path="external/chromium-webview" clone-depth="1" revision="b006fb1dbbab87f8cb7e226b0fe741f319210aea" />
 
   <!-- AOSP references from higher releases -->
   <project name="platform/external/jhead" path="external/jhead" remote="aosp" revision="refs/tags/android-6.0.1_r81"/>
@@ -115,8 +115,13 @@
   <project name="platform/system/ca-certificates" path="system/ca-certificates" remote="aosp" revision="refs/tags/android-8.1.0_r36" />
   
   <!-- Privacy-Browser (stoutner.com) -->
-  <remote name="stoutner" fetch="git://git.stoutner.com" />
+  <remote name="stoutner" fetch="https://github.com" />
   <project path="external/stoutner/privacy-browser" remote="stoutner"
-           name="git/PrivacyBrowserROMIntegration.git" clone-depth="1" revision="master" />
+           name="jmpfbmx/android_external_stoutner_privacy-browser.git" clone-depth="1" revision="master" />
+
+  <project name="cmtank/device_amazon_tank" path="device/amazon/tank" remote="github" revision="cm-12.1"/>
+  <project name="cmtank/android_kernel_amazon_mt8127" path="kernel/amazon/mt8127" remote="github" revision="cm-12.1"/>
+  <project name="cmtank/vendor_amazon_tank" path="vendor/amazon/tank" remote="github" revision="cm-12.1"/>
+  <project name="LineageOS/android_hardware_broadcom_wlan" path="hardware/broadcom/wlan" remote="github" revision="cm-12.1"/>
 
 </manifest>
